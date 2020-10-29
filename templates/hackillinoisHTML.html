@@ -1,0 +1,128 @@
+<h1>
+\</h1>
+<h2>
+Text Summarizer
+</h2>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css">
+  <!-- <script src="https://unpkg.com/aios/dist/axios.min.js"></script> -->
+  <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+  <script src="/js"></script>
+</head>
+<body onload=init()>
+    <ul>
+        <li><a class="active" href="hackillinoisHTML.html">Home</a></li>
+        <li><a href="#news">Summarizer</a></li>
+        <li><a href="#home">About Us</a></li>
+    </ul>
+<style>
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 235px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function fetchUrl() {
+  var url = document.getElementById("input");
+  processUrl(url.value);
+}
+
+function init() {
+  // Close the dropdown if the user clicks outside of it
+  document.getElementById("findSummary").onclick = function(event) {
+
+    fetchUrl();
+  }
+
+  
+  document.getElementById("myDropdown").onclick = function(event) {
+    
+    
+       var dropdowns = document.getElementById("dropdown-content");
+  
+         if (dropdowns.classList.contains('show')) {
+           dropdowns.classList.remove('show');
+          } else {
+            dropdowns.classList.add('show');
+           }
+    
+         }
+       }
+     
+
+
+</script>
+
+</body>
+
+<h3>
+<input id="input" type="text" placeholder="Enter the website URL: ">
+<button onclick="myFunction()">Find Summary</button>
+
+<!-- <input id="findSummary" type="button" value="Find Summary" findSummary.onclick="showSummary()"> -->
+<br>
+</h3>
+<style>
+  h3{
+	position: relative;
+	top: 75px;
+  right: -480px;
+  /* text-align: center; */
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 180px;
+  text-decoration: none;
+}
+</style>
+<p id="demo"></p>
+<br>
+<h5>
+<p id="summary">This article covers information about lung and mucosa.
+    The study is for distances of at least 500 kilometers across the indian continent creating the socalled deccan traps flood basalts that in some places are nearly 2 kilometers thick.</p>
+</h5>
+  <!-- <p id = "output"></p> -->
+<style>
+  h5{
+    color:transparent;
+  }
+</style>
+
+
+ <script>
+ function myFunction() {
+   document.getElementById("summary").style.color="#000000";
+  // summarizer = document.getElementById('String').value
+  // document.getElementById('output').innerHTML = "wow"
+ }
+ 
+</script>
